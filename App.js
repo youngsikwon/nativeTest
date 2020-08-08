@@ -26,22 +26,32 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 class SYJ extends Component{
     render() {
+        let SyjImg = '';
+
+        if(this.props.type == 'one'){
+
+            SyjImg = require('./assets/SYJ.jpg');
+
+        }else if(this.props.type == 'two'){
+
+            SyjImg = require('./assets/SYJ2.jpg');
+        }
+
         return (
             <View>
-                <Image source ={require('./assets/SYJ.jpg')}
+                <Image source ={SyjImg}
                 style={{width : 200, height : 250}}/>
-
             </View>
+
         );
     }
 }
-
-
 const App: () => React$Node = () => {
   return (
       <View style = {styles.container}>
         <Text style = {styles.hello}>hello world good night</Text>
-          <SYJ/>
+          <SYJ type='one'/>
+          <SYJ type='two'/>
       </View>
   );
 }
