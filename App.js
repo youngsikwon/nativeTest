@@ -23,7 +23,9 @@ import {
   Colors,
   DebugInstructions,
   ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+}
+from 'react-native/Libraries/NewAppScreen';
+
 class SYJ extends Component{
     render() {
         let SyjImg = '';
@@ -39,8 +41,7 @@ class SYJ extends Component{
 
         return (
             <View>
-                <Image source ={SyjImg}
-                style={{width : 200, height : 250}}/>
+                <Image source ={SyjImg} style={{width : 300, height : 400}}/>
             </View>
 
         );
